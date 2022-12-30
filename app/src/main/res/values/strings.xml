@@ -1,0 +1,165 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Health App</string>
+    <string name="health_app_v1_0">Health App v1.0</string>
+    <string name="by_aiims">by AIIMS</string>
+
+    <!--get started screens-->
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="screen_number">%s/3</string>
+    <string name="continue_to_app">Continue</string>
+
+    <string name="track_your_daily_tasks_and_activities">Track your daily tasks and activities</string>
+    <string name="with_our_activity_calendar_analyze_your_tasks_and_activities">
+        with our activity calendar, analyze your tasks and activities
+    </string>
+
+    <string name="check_how_was_your_mood_during_day">Check how was your mood during day</string>
+    <string name="analyze_your_emotions_and_know_your_mood_variations.">
+        analyze your emotions and know your mood variations
+    </string>
+
+    <string name="know_if_your_are_getting_enough_sleep">Know if you are getting enough sleep</string>
+    <string name="monitor_your_sleep_hours_by_analyzing_your_sleep_and_wake_time">
+        monitor your sleep by analyzing your sleep and wake time
+    </string>
+
+    <!--sign in screens-->
+    <string name="let_s_get_started">Let\'s get started!</string>
+    <string name="sign_in_with_your_account_or_create_a_new_one">sign in with your account or create a new one</string>
+    <string name="you_ve_been_missed">You\'ve been missed!</string>
+    <string name="welcome_back_nlog_in_to_your_account">Welcome back\nLog in to your account.</string>
+    <string name="let_s_sign_you_in">Let\'s sign you in.</string>
+    <string name="welcome_user_ncreate_a_new_account">Welcome user\nCreate a new account.</string>
+    <string name="email_address_required">Email address required</string>
+    <string name="password_required">password required</string>
+    <string name="confirm_password_required">Confirm password required</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_mobile">Enter your mobile</string>
+    <string name="great_nyou_re_just_few_steps_away">Great!\nYou\'re just few steps away.</string>
+    <string name="by_signing_in_you_agree_to_our_terms_and_conditions">By signing in you agree to our terms and conditions.</string>
+    <string name="mobile_number_required">Mobile number required</string>
+    <string name="invalid_mobile_number">Invalid mobile number</string>
+    <string name="name_required">Name required</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="signup">Signup</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="don_t_have_an_account">Don\'t have an Account?</string>
+    <string name="password_length_too_short">Password length too short, must be 8 characters</string>
+    <string name="login">Login</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="passwords_does_not_match">passwords does not match</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="email_must_end_with_gmail_com">Email must end with \'@gmail.com\'</string>
+
+    <!--navigation bar-->
+    <string name="home">Home</string>
+    <string name="meal">Meal</string>
+    <string name="exercise">Exercise</string>
+    <string name="settings">Settings</string>
+    <string name="health">Health</string>
+
+    <!--home fragment-->
+    <string name="user_greeting">Hi, %s 👋</string>
+    <string name="are_you_ready_for_a_new_day">Are you ready for a new day?</string>
+    <string name="weekly_tasks">Weekly Tasks</string>
+    <string name="wake_up_10_am">Wake - 10 AM</string>
+    <string name="_10_am_noon">10 AM - Noon</string>
+    <string name="noon_3_pm">Noon - 3 PM</string>
+    <string name="_3_pm_5_pm">3 PM - 5 PM</string>
+    <string name="_5_pm_8_pm">5 PM - 8 PM</string>
+    <string name="_8_pm_bedtime">8 PM - Sleep</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="select">Select</string>
+    <string name="tasks_analysis">Tasks Analysis</string>
+    <string name="how_are_you_feeling">How Are You Feeling?</string>
+    <string name="happy">Happy</string>
+    <string name="anxious">Anxious</string>
+    <string name="sad">Sad</string>
+    <string name="anger">Anger</string>
+    <string name="fear">Fear</string>
+    <string name="rate_your_mood">Rate Your Mood</string>
+    <string name="evening">Evening</string>
+    <string name="noon">Noon</string>
+    <string name="morning">Morning</string>
+    <string name="mood_analysis">Mood Analysis</string>
+    <string name="sleep">Did You Sleep Well?</string>
+    <string name="sleep_analysis">Sleep Analysis</string>
+    <string name="wake_time">Wake Time</string>
+    <string name="bed_time">Bed Time</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="add_sleep_notes">Add Sleep Notes</string>
+    <string name="add_your_thoughts_here">Add your thoughts here…</string>
+
+    <string-array name="tasks_array">
+        <item>Leisure</item>
+        <item>Sleep</item>
+        <item>Play</item>
+        <item>Mobile</item>
+        <item>Housework</item>
+        <item>Office Work</item>
+        <item>Reading</item>
+        <item>Music</item>
+        <item>Movie</item>
+        <item>Eating</item>
+        <item>Drinking</item>
+        <item>Self-Care</item>
+        <item>Walking</item>
+        <item>Cooking</item>
+        <item>Workout</item>
+        <item>Others</item>
+    </string-array>
+    <string name="select_tasks">Select Tasks</string>
+    <string name="add_task1_task2" tools:ignore="TypographyEllipsis">Add Task1, Task2, ...</string>
+
+    <!--settings fragment-->
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+
+
+    <!--about activity-->
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="profile">Profile</string>
+    <string name="about_health_application">This application was created in-collaboration with AIIMS Bathinda and Baba Farid College of Engineering and Technology. It is maintained by the students at Baba Farid College of Engineering and Technology.</string>
+    <string name="use_of_resources">The images and illustrations used in this application belongs to their respective owners and are not owned by us. Below is the list of the sources used for images:
+    </string>
+    <string name="resources_info">Open Doodles - https://www.opendoodles.com/\nFlaticon - https://www.flaticon.com/
+    </string>
+
+
+    <!-- additional -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="others">Others</string>
+    <string name="close">Close</string>
+    <string name="go_back">go back</string>
+    <string name="open_profile">open_profile</string>
+    <string name="app_logo">App Logo</string>
+    <string name="application_logo">application logo</string>
+    <string name="empty_field">Field is empty!</string>
+    <string name="add_your_sleep_notes">Add your sleep notes</string>
+
+    <string name="workouts_plans">Workouts Plans</string>
+    <string name="meals_for_you">Meals for You</string>
+    <string name="explore_food_and_diet_recommendations_with_workout_plans">Explore food and diet recommendations with workout plans.</string>
+    <string name="meals">Meals</string>
+    <string name="workouts">Workouts</string>
+
+    <string name="diet_plans">Diet Plans</string>
+    <string name="for_breakfast_lunch_and_dinner">for breakfast, lunch and dinner</string>
+    <string name="workout_plans">Workout Plans</string>
+    <string name="yoga_cardio_and_exercises">yoga, cardio and exercises</string>
+
+</resources>

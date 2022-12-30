@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="12dp"
+                android:text="@string/wake_up_10_am"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="12dp"
+                android:text="@string/_10_am_noon"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="12dp"
+                android:text="@string/noon_3_pm"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="12dp"
+                android:text="@string/_3_pm_5_pm"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="12dp"
+                android:text="@string/_5_pm_8_pm"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="12dp"
+                android:text="@string/_8_pm_bedtime"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowSunday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewSun"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/sunday"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/sunTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/sunTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/sunTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/sunTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/sunTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/sunTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowMonday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewMon"
+                android:text="@string/monday"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/monTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/monTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/monTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/monTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/monTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/monTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowTuesday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewTue"
+                android:text="@string/tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tueTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"  />
+
+            <TextView
+                android:id="@+id/tueTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"  />
+
+            <TextView
+                android:id="@+id/tueTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/tueTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/tueTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"  />
+
+            <TextView
+                android:id="@+id/tueTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"  />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowWednesday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewWed"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp"
+                android:text="@string/wednesday" />
+
+            <TextView
+                android:id="@+id/wedTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"  />
+
+            <TextView
+                android:id="@+id/wedTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/wedTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/wedTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/wedTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/wedTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowThursday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewThu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp"
+                android:text="@string/thursday"/>
+
+            <TextView
+                android:id="@+id/thuTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/thuTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/thuTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/thuTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/thuTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/thuTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowFriday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewFri"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp"
+                android:text="@string/friday"/>
+
+            <TextView
+                android:id="@+id/friTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/friTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/friTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/friTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/friTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/friTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowSaturday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewSat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/backgroundColor"
+                android:padding="12dp"
+                android:textSize="12sp"
+                android:text="@string/saturday" />
+
+            <TextView
+                android:id="@+id/satTextView1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/satTextView2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown" />
+
+            <TextView
+                android:id="@+id/satTextView3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/satTextView4"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/satTextView5"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+            <TextView
+                android:id="@+id/satTextView6"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:hint="@string/select"
+                android:textSize="12sp"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/icon_dropdown"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</layout>

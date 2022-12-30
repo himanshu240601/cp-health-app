@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userObject"
+            type="com.example.healthapp_collegeproject.home.models.UserModel" />
+
+        <variable
+            name="dataObject"
+            type="com.example.healthapp_collegeproject.home.fragments.homefragment.models.SleepAndMoodModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.fragments.homefragment.HomeFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/openProfile"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@{@string/user_greeting(userObject.first_name)}"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/are_you_ready_for_a_new_day"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_light"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <ImageView
+                    android:id="@+id/openProfile"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/default_profile"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/open_profile"/>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scrollbars="none"
+                android:layout_below="@id/appbar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="?attr/actionBarSize">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/weekly_tasks"
+                        android:textSize="18sp"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginTop="16dp">
+
+                        <include
+                            layout="@layout/task_table_layout"/>
+
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/tasks_analysis"
+                        android:textSize="18sp"/>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/tasksTrackBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:background="@drawable/background_rounded_corners"
+                        android:layout_marginTop="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/how_are_you_feeling"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/anxious"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_rounded_corners"
+                            android:padding="12dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/mood_anxious"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="@string/anxious"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="11sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/sad"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_rounded_corners"
+                            android:padding="12dp"
+                            android:layout_marginHorizontal="4dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/mood_sadness"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="@string/sad"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="11sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/happy"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_rounded_corners"
+                            android:padding="12dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/mood_happiness"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="@string/happy"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="11sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/fear"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_rounded_corners"
+                            android:padding="12dp"
+                            android:layout_marginHorizontal="4dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/mood_fear"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="@string/fear"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="11sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/anger"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_rounded_corners"
+                            android:padding="12dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/mood_anger"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="@string/anger"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textSize="11sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/rate_your_mood"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabLayoutMood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_rounded_corners"
+                            android:backgroundTint="?attr/backgroundColor"
+                            app:tabSelectedTextColor="?attr/colorPrimary"
+                            app:tabTextAppearance="@style/TabFontStyle"
+                            app:tabIndicatorColor="?attr/colorPrimary">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tab1"
+                                android:text="@string/morning"/>
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tab2"
+                                android:text="@string/noon"/>
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tab3"
+                                android:text="@string/evening"/>
+
+                        </com.google.android.material.tabs.TabLayout>
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/moodRatingSeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:valueFrom="0"
+                            android:valueTo="5"
+                            app:thumbColor="?attr/colorPrimary"
+                            app:thumbStrokeWidth="0dp"
+                            app:trackColorActive="?attr/colorPrimary"
+                            app:trackColorInactive="?attr/backgroundColor"
+                            app:thumbElevation="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/mood_analysis"
+                        android:textSize="18sp"/>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/moodTrackBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_rounded_corners" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/sleep"
+                        android:textSize="18sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/bedTime"
+                            android:layout_weight="1"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/bed_time"
+                            android:text="@{dataObject.bedTime}"
+                            android:background="@drawable/background_rounded_corners"
+                            android:focusable="false"
+                            android:cursorVisible="false"
+                            android:textSize="14sp"
+                            android:inputType="time"
+                            android:importantForAutofill="no" />
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="match_parent"/>
+
+                        <EditText
+                            android:id="@+id/wakeTime"
+                            android:layout_weight="1"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/wake_time"
+                            android:text="@{dataObject.wakeTime}"
+                            android:background="@drawable/background_rounded_corners"
+                            android:focusable="false"
+                            android:cursorVisible="false"
+                            android:textSize="14sp"
+                            android:inputType="time"
+                            android:importantForAutofill="no" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextSleepNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/add_notes"
+                        android:text="@{dataObject.sleepNotes}"
+                        android:background="@drawable/background_rounded_corners"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:textSize="14sp"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/sleep_analysis"
+                        android:textSize="18sp"/>
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/sleepTrackGraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@drawable/background_rounded_corners"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>

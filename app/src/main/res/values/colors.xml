@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Customized Colors-->
+    <color name="blue">#676af7</color>
+    <color name="blue_light">#70acff</color>
+
+    <color name="violet">#9d5ff2</color>
+    <color name="violet_light">#b283ff</color>
+
+    <color name="light">#fafafa</color>
+    <color name="dark">#1E1E1E</color>
+
+    <color name="transparent">#00000000</color>
+</resources>
